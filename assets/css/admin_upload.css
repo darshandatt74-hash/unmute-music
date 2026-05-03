@@ -1,0 +1,117 @@
+ *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:radial-gradient(circle at top, #1db95422, #000 60%);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+}
+
+/* Container */
+.upload-card{
+    width:420px;
+    background:#121212;
+    border-radius:18px;
+    padding:30px;
+    box-shadow:0 25px 60px rgba(0,0,0,.6);
+    animation:fadeUp .6s ease;
+}
+
+/* Animation */
+@keyframes fadeUp{
+    from{opacity:0; transform:translateY(40px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+/* Header */
+.upload-card h2{
+    font-size:22px;
+    margin-bottom:20px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.upload-card h2 i{
+    color:#1db954;
+}
+
+/* Inputs */
+.form-group{
+    margin-bottom:15px;
+}
+
+.form-group label{
+    font-size:13px;
+    color:#bbb;
+    margin-bottom:5px;
+    display:block;
+}
+
+.form-group input{
+    width:100%;
+    padding:12px 14px;
+    border-radius:12px;
+    border:none;
+    outline:none;
+    background:#1e1e1e;
+    color:#fff;
+    transition:.3s;
+}
+
+.form-group input:focus{
+    background:#222;
+    box-shadow:0 0 0 2px #1db95455;
+}
+
+/* File input */
+input[type="file"]{
+    padding:10px;
+    cursor:pointer;
+}
+
+/* Button */
+.upload-btn{
+    width:100%;
+    padding:13px;
+    margin-top:10px;
+    background:#1db954;
+    border:none;
+    border-radius:25px;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.upload-btn:hover{
+    background:#1ed760;
+    transform:scale(1.02);
+}
+
+/* Back */
+.back-link{
+    display:inline-block;
+    margin-bottom:15px;
+    text-decoration:none;
+    color:#1db954;
+    font-size:14px;
+}
+
+/* Success / Error */
+.msg{
+    margin-bottom:15px;
+    padding:10px;
+    border-radius:10px;
+    font-size:13px;
+}
+
+.success{ background:#1db95433; color:#1ed760; }
+.error{ background:#ff4d4d33; color:#ff6b6b; }

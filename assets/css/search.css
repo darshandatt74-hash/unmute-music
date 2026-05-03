@@ -1,0 +1,130 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#000;
+    color:#fff;
+}
+
+/* TOP BAR */
+.topbar{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    padding:20px 30px;
+    border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+.back-btn{
+    color:#1db954;
+    text-decoration:none;
+    font-weight:500;
+    display:flex;
+    align-items:center;
+    gap:6px;
+    transition:.3s;
+}
+
+.back-btn:hover{
+    transform:translateX(-5px);
+}
+
+.main{
+    padding:30px;
+}
+
+/* SEARCH BAR */
+.search-box{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    background:rgba(255,255,255,0.08);
+    padding:14px 18px;
+    border-radius:40px;
+    width:420px;
+    backdrop-filter:blur(12px);
+}
+
+.search-box input{
+    flex:1;
+    background:transparent;
+    border:none;
+    outline:none;
+    color:#fff;
+}
+
+.search-box button{
+    background:linear-gradient(135deg,#1db954,#1ed760);
+    border:none;
+    padding:8px 20px;
+    border-radius:30px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.search-box i{
+    color:#1db954;
+}
+
+/* SONG GRID */
+.song-grid{
+    display:flex;
+    flex-wrap:wrap;
+    gap:22px;
+    margin-top:35px;
+}
+
+/* CARD */
+.song-card{
+    width:230px;
+    background:rgba(255,255,255,0.06);
+    backdrop-filter:blur(15px);
+    padding:18px;
+    border-radius:18px;
+    transition:.35s;
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
+}
+
+.song-card:hover{
+    transform:translateY(-8px) scale(1.04);
+    background:rgba(255,255,255,0.1);
+}
+
+.song-card h3{
+    font-size:15px;
+}
+
+.song-card p{
+    font-size:13px;
+    color:#aaa;
+}
+
+/* PLAY BUTTON */
+.play-btn{
+    margin-top:12px;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:8px 18px;
+    background:#1db954;
+    color:#000;
+    border-radius:30px;
+    text-decoration:none;
+    font-size:13px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.play-btn:hover{
+    background:#1ed760;
+    transform:scale(1.1);
+}
+
+.no-result{
+    margin-top:30px;
+    color:#aaa;
+}

@@ -1,0 +1,70 @@
+ *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#121212;
+    color:#fff;
+}
+
+/* Navbar */
+.navbar{
+    background:#000;
+    padding:15px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.navbar h2{
+    color:#1db954;
+}
+
+.navbar a{
+    color:white;
+    margin-left:20px;
+    text-decoration:none;
+}
+
+/* Song Cards */
+.container{
+    padding:30px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#181818;
+    padding:15px;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.card:hover{
+    background:#282828;
+    transform:scale(1.05);
+}
+
+.card img{
+    width:100%;
+    border-radius:10px;
+}
+
+.card h3{
+    margin-top:10px;
+}
+
+.play-btn{
+    display:inline-block;
+    margin-top:10px;
+    padding:8px 15px;
+    background:#1db954;
+    color:#000;
+    border-radius:20px;
+    text-decoration:none;
+}
+
