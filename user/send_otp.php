@@ -8,6 +8,7 @@ use PHPMailer\PHPMailer\Exception;
 require "../includes/PHPMailer/Exception.php";
 require "../includes/PHPMailer/PHPMailer.php";
 require "../includes/PHPMailer/SMTP.php";
+require "../config/mail.php";
 
 $name     = $_POST['name'];
 $email    = $_POST['email'];
@@ -25,17 +26,18 @@ $_SESSION['otp_expiry'] = time() + 600;
 
 /* Send Mail */
 $mail = new PHPMailer(true);
+$mailConfig = app_mail_config();
 
 try{
     $mail->isSMTP();
-    $mail->Host = 'smtp.gmail.com';
+    $mail->Host = $mailConfig['host'];
     $mail->SMTPAuth = true;
-    $mail->Username = 'darshandatt74@gmail.com';
-    $mail->Password = 'ekqtbptwhvtkhdlu';
+    $mail->Username = $mailConfig['username'];
+    $mail->Password = $mailConfig['password'];
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-    $mail->Port = 587;
+    $mail->Port = $mailConfig['port'];
 
-    $mail->setFrom('darshandatt74@gmail.com','UNMUTE MUSIC');
+    $mail->setFrom($mailConfig['from'], $mailConfig['from_name']);
     $mail->addAddress($email);
 
     $mail->isHTML(true);

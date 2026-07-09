@@ -1,0 +1,12 @@
+Options -Indexes
+DirectoryIndex index.php index.html
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+</IfModule>
+
+RedirectMatch 404 ^/(config|database|docker)(/|$)
+
+<FilesMatch "^(Dockerfile|render\.yaml|\.env|composer\.(json|lock))$">
+    Require all denied
+</FilesMatch>

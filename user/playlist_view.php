@@ -1,6 +1,11 @@
 <?php
 session_start();
-include("../config/db.php");
+include_once("../config/db.php");
+
+if(!isset($conn) || !$conn){
+header("Location: ../config/db.php");
+exit;
+}
 
 if(!isset($_SESSION['user'])){
 header("Location: login.php");
